@@ -1,4 +1,4 @@
-# 🧬 ARG Mobility Prediction System# 🧬 ARG Mobility Prediction System# 🧬 ARG Mobility Prediction System# 🧬 ARG Mobility Prediction System
+# 🧬 ARG Mobility Prediction System# 🧬 ARG Mobility Prediction System# 🧬 ARG Mobility Prediction System# 🧬 ARG Mobility Prediction System# 🧬 ARG Mobility Prediction System
 
 
 
@@ -14,7 +14,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)**AI-Powered Prediction of Antibiotic Resistance Gene Mobility using ESM Protein Language Models & XGBoost****AI-Powered Prediction of Antibiotic Resistance Gene Mobility using ESM Protein Language Models & XGBoost**
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)**AI-Powered Prediction of Antibiotic Resistance Gene Mobility using ESM Protein Language Models & XGBoost**
 
 ---
 
@@ -30,7 +30,7 @@ The rise of antimicrobial resistance (AMR) poses a global threat, largely driven
 
 ### Key Features
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)**AI-Powered Prediction of Antibiotic Resistance Gene Mobility using ESM Protein Language Models & XGBoost****AI-Powered Prediction of Antibiotic Resistance Gene Mobility using ESM Protein Language Models & XGBoost**
 
 - 🤖 **ESM-2 (650M parameters)** - Meta's protein language model for sequence embeddings
 
@@ -38,7 +38,7 @@ The rise of antimicrobial resistance (AMR) poses a global threat, largely driven
 
 - 🎨 **Interactive Streamlit UI** - Real-time predictions with beautiful visualizations
 
-- 📊 **CARD Database** - 6,053 curated antibiotic resistance genes[![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-red.svg)](https://pytorch.org/)[![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-red.svg)](https://pytorch.org/)
+- 📊 **CARD Database** - 6,053 curated antibiotic resistance genes[![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-red.svg)](https://pytorch.org/)
 
 - 🔍 **Similarity Search** - Find nearest matching genes in database
 
@@ -46,7 +46,7 @@ The rise of antimicrobial resistance (AMR) poses a global threat, largely driven
 
 
 
----[![Streamlit](https://img.shields.io/badge/Streamlit-1.51.0-green.svg)](https://streamlit.io/)[![Streamlit](https://img.shields.io/badge/Streamlit-1.51.0-green.svg)](https://streamlit.io/)
+---[![Streamlit](https://img.shields.io/badge/Streamlit-1.51.0-green.svg)](https://streamlit.io/)
 
 
 
@@ -62,7 +62,7 @@ The rise of antimicrobial resistance (AMR) poses a global threat, largely driven
 
 - CUDA-capable GPU (optional, for faster inference)
 
-- 8GB+ RAM---
+- 8GB+ RAM[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 
 
 
@@ -78,7 +78,7 @@ git clone https://github.com/riya7064/GeneMobility.git- 🎨 **Interactive Strea
 
 cd GeneMobility
 
-- 📊 **CARD Database** - 6,053 curated antibiotic resistance genes## 🎯 Overview
+- 📊 **CARD Database** - 6,053 curated antibiotic resistance genes[![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-red.svg)](https://pytorch.org/)[![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-red.svg)](https://pytorch.org/)
 
 # Install dependencies
 
@@ -94,7 +94,7 @@ pip install -r requirements.txt- 🔍 **Similarity Search** - Find nearest match
 
 ```bash
 
-# Set environment variable---The rise of antimicrobial resistance (AMR) poses a global threat, largely driven by horizontal gene transfer (HGT) of antibiotic resistance genes (ARGs) between bacteria. This project combines **ESM-2 protein language models** with **XGBoost machine learning** to predict whether an ARG is mobile or non-mobile.
+# Set environment variable---[![Streamlit](https://img.shields.io/badge/Streamlit-1.51.0-green.svg)](https://streamlit.io/)[![Streamlit](https://img.shields.io/badge/Streamlit-1.51.0-green.svg)](https://streamlit.io/)
 
 $env:KMP_DUPLICATE_LIB_OK="TRUE"  # Windows PowerShell
 
@@ -110,7 +110,7 @@ streamlit run app.py
 
 ```
 
-### Prerequisites### Key Features
+### Prerequisites[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Open your browser and navigate to **http://localhost:8501**
 
@@ -126,7 +126,7 @@ Open your browser and navigate to **http://localhost:8501**
 
 ### ESM-2 Protein Language Model
 
-- 8GB+ RAM- 🤖 **ESM-2 (650M parameters)** - Meta's protein language model
+- 8GB+ RAM---
 
 - **Architecture**: Transformer-based (650M parameters)
 
@@ -134,7 +134,7 @@ Open your browser and navigate to **http://localhost:8501**
 
 - **Embedding Size**: 1,280 dimensions
 
-- **Layer Used**: Layer 33 (final representation)### Installation- 🌲 **XGBoost Classifier** - 99% accuracy- 🤖 **ESM-2 (650M parameters)** - Meta's protein language model for sequence embeddings
+- **Layer Used**: Layer 33 (final representation)### Installation- 🤖 **ESM-2 (650M parameters)** - Meta's protein language model for sequence embeddings
 
 
 
@@ -142,7 +142,7 @@ Open your browser and navigate to **http://localhost:8501**
 
 
 
-- **Algorithm**: Gradient Boosting Decision Trees```bash- 🎨 **Interactive UI** - Real-time predictions- 🌲 **XGBoost Classifier** - Gradient boosting with 99% accuracy
+- **Algorithm**: Gradient Boosting Decision Trees```bash- 🌲 **XGBoost Classifier** - Gradient boosting with 99% accuracy---
 
 - **Hyperparameters**:
 
@@ -150,7 +150,7 @@ Open your browser and navigate to **http://localhost:8501**
 
   - `max_depth`: 8
 
-  - `learning_rate`: 0.05git clone https://github.com/riya7064/GeneMobility.git- 📊 **6,053 ARGs** from CARD Database- 🎨 **Interactive Streamlit UI** - Real-time predictions with beautiful visualizations
+  - `learning_rate`: 0.05git clone https://github.com/riya7064/GeneMobility.git- 🎨 **Interactive Streamlit UI** - Real-time predictions with beautiful visualizations
 
   - `subsample`: 0.7
 
@@ -158,7 +158,7 @@ cd GeneMobility
 
 ### Performance Metrics
 
-- 🔍 **Similarity Search** - Find nearest genes- 📊 **CARD Database** - 6,053 curated antibiotic resistance genes
+- 📊 **CARD Database** - 6,053 curated antibiotic resistance genes## 🎯 Overview
 
 ```
 
@@ -166,7 +166,7 @@ Accuracy:   99.01%# Install dependencies
 
 Precision:  100% (Mobile ARGs)
 
-Recall:     99% (Mobile ARGs)pip install -r requirements.txt- 📈 **Batch Processing** - Analyze multiple sequences- 🔍 **Similarity Search** - Find nearest matching genes in database
+Recall:     99% (Mobile ARGs)pip install -r requirements.txt- 🔍 **Similarity Search** - Find nearest matching genes in database
 
 F1-Score:   0.99
 
@@ -174,7 +174,184 @@ F1-Score:   0.99
 
 
 
----- 📈 **Batch Processing** - Analyze multiple sequences at once
+---- 📈 **Batch Processing** - Analyze multiple sequences at once## 🎯 Overview
+
+
+
+## 💡 Usage Examples### Run the Web Application
+
+
+
+### Single Sequence Prediction
+
+
+
+```python```bash
+
+# Example: 23S rRNA methyltransferase Erm(A)
+
+sequence = "MKQKNPKNTQNFITSKKHVKEILKYTNINKQDKIIEIGSGKGHFTK..."# Set environment variable---The rise of antimicrobial resistance (AMR) poses a global threat, largely driven by horizontal gene transfer (HGT) of antibiotic resistance genes (ARGs) between bacteria. This project combines **ESM-2 protein language models** with **XGBoost machine learning** to predict whether an ARG is mobile or non-mobile.
+
+
+
+# Prediction: Non-Mobile ARG (39.22% probability)$env:KMP_DUPLICATE_LIB_OK="TRUE"  # Windows PowerShell
+
+```
+
+# OR
+
+### Batch Analysis
+
+export KMP_DUPLICATE_LIB_OK=TRUE  # Linux/Mac
+
+Upload a CSV file with columns:
+
+- `sequence`: Protein amino acid sequence## 🚀 Quick StartThe rise of antimicrobial resistance (AMR) poses a global threat, largely driven by the horizontal gene transfer (HGT) of antibiotic resistance genes (ARGs) between bacteria. This project combines state-of-the-art **ESM-2 protein language models** with **XGBoost machine learning** to predict whether an ARG is mobile (transferable) or non-mobile (chromosomally stable).
+
+- `gene_name` (optional): Gene identifier
+
+# Launch Streamlit app
+
+---
+
+streamlit run app.py
+
+## 📁 Project Structure
+
+```
+
+```
+
+GeneMobility/### Prerequisites### Key Features
+
+├── app.py                              # Streamlit web application
+
+├── requirements.txt                    # Python dependenciesOpen your browser and navigate to **http://localhost:8501**
+
+├── Notebooks/                          # Jupyter notebooks
+
+│   ├── ARG_Exploratory_Data_Analysis.ipynb
+
+│   └── ARG_Mobility_Prediction_Model.ipynb
+
+├── Outputs/                            # Model files and results---
+
+│   ├── mobility_predictor_xgb.pkl     # Trained XGBoost model
+
+│   ├── card_embeddings.pkl            # Pre-computed ESM embeddings- Python 3.10+### Key Features
+
+│   └── ARG_mobility_results.csv       # Prediction results
+
+└── card-data/                          # CARD database files## 📊 Model Architecture
+
+    ├── card.json
+
+    ├── aro_index.tsv- CUDA-capable GPU (optional, for faster inference)
+
+    └── protein_fasta_protein_*.fasta
+
+```### ESM-2 Protein Language Model
+
+
+
+---- 8GB+ RAM- 🤖 **ESM-2 (650M parameters)** - Meta's protein language model
+
+
+
+## 🛠️ Technologies- **Architecture**: Transformer-based (650M parameters)
+
+
+
+- **Python 3.10+** - Core programming language- **Training Data**: 250M protein sequences
+
+- **PyTorch 2.5.1** - Deep learning framework
+
+- **ESM-2** - Protein language model by Meta AI- **Embedding Size**: 1,280 dimensions
+
+- **XGBoost 3.1.1** - Gradient boosting framework
+
+- **Streamlit 1.51.0** - Web application framework- **Layer Used**: Layer 33 (final representation)### Installation- 🌲 **XGBoost Classifier** - 99% accuracy- 🤖 **ESM-2 (650M parameters)** - Meta's protein language model for sequence embeddings
+
+- **Plotly** - Interactive visualizations
+
+- **Pandas & NumPy** - Data manipulation
+
+
+
+---### XGBoost Classifier
+
+
+
+## 🤝 Contributing
+
+
+
+Pull requests welcome! Please submit issues for bugs/features.- **Algorithm**: Gradient Boosting Decision Trees```bash- 🎨 **Interactive UI** - Real-time predictions- 🌲 **XGBoost Classifier** - Gradient boosting with 99% accuracy
+
+
+
+---- **Hyperparameters**:
+
+
+
+## 📄 Citation  - `n_estimators`: 200# Clone the repository
+
+
+
+```bibtex  - `max_depth`: 8
+
+@software{arg_mobility_2025,
+
+  title = {ARG Mobility Prediction System},  - `learning_rate`: 0.05git clone https://github.com/riya7064/GeneMobility.git- 📊 **6,053 ARGs** from CARD Database- 🎨 **Interactive Streamlit UI** - Real-time predictions with beautiful visualizations
+
+  author = {Riya},
+
+  year = {2025},  - `subsample`: 0.7
+
+  url = {https://github.com/riya7064/GeneMobility}
+
+}cd GeneMobility
+
+```
+
+### Performance Metrics
+
+---
+
+- 🔍 **Similarity Search** - Find nearest genes- 📊 **CARD Database** - 6,053 curated antibiotic resistance genes
+
+## 📧 Contact
+
+```
+
+For questions or collaborations, please open an issue on GitHub.
+
+Accuracy:   99.01%# Install dependencies
+
+---
+
+Precision:  100% (Mobile ARGs)
+
+## 🙏 Acknowledgments
+
+Recall:     99% (Mobile ARGs)pip install -r requirements.txt- 📈 **Batch Processing** - Analyze multiple sequences- 🔍 **Similarity Search** - Find nearest matching genes in database
+
+- **CARD Database** - Comprehensive Antibiotic Resistance Database
+
+- **Meta AI** - ESM protein language modelsF1-Score:   0.99
+
+- **XGBoost Team** - Machine learning framework
+
+- **Streamlit** - Web app framework``````
+
+
+
+---
+
+
+
+**⚠️ Disclaimer**: This tool is for research purposes only. Clinical decisions should be made by qualified professionals.---- 📈 **Batch Processing** - Analyze multiple sequences at once
+
 
 
 
