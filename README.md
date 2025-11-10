@@ -1,120 +1,657 @@
-# Data-Driven Analysis of Antibiotic Resistance Gene Mobility for Predicting Horizontal Gene Transfer Risk
+# 🧬 ARG Mobility Prediction System# 🧬 ARG Mobility Prediction System
+
+
+
+**AI-Powered Prediction of Antibiotic Resistance Gene Mobility using ESM Protein Language Models & XGBoost****AI-Powered Prediction of Antibiotic Resistance Gene Mobility using ESM Protein Language Models & XGBoost**
+
+
+
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-red.svg)](https://pytorch.org/)[![PyTorch](https://img.shields.io/badge/PyTorch-2.5.1-red.svg)](https://pytorch.org/)
+
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.51.0-green.svg)](https://streamlit.io/)[![Streamlit](https://img.shields.io/badge/Streamlit-1.51.0-green.svg)](https://streamlit.io/)
+
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-## Abstract
+---
 
-The rise of antimicrobial resistance (AMR) poses a global threat, largely driven by the horizontal gene transfer (HGT) of antibiotic resistance genes (ARGs) between bacteria. Mobile genetic elements such as plasmids, integrons, and transposons enable the transfer of ARGs across environmental, clinical, and agricultural ecosystems, leading to treatment-resistant infections.
+## 🎯 Overview
 
-This project performs a data-driven computational analysis of antibiotic resistance genes using genomic and metadata obtained from the Comprehensive Antibiotic Resistance Database (CARD). Protein sequences, gene families, resistance mechanisms, and ontology metadata are processed to quantify attributes linked to mobility. Machine learning is applied to cluster and classify genes based on mobility potential, identifying high-risk ARGs capable of transferring across bacterial species.
+## 🎯 Overview
 
-The project outputs a ranked list of "high-risk mobile genes" and visual mobility maps, contributing to global AMR surveillance and drug discovery research.
+The rise of antimicrobial resistance (AMR) poses a global threat, largely driven by horizontal gene transfer (HGT) of antibiotic resistance genes (ARGs) between bacteria. This project combines **ESM-2 protein language models** with **XGBoost machine learning** to predict whether an ARG is mobile or non-mobile.
+
+The rise of antimicrobial resistance (AMR) poses a global threat, largely driven by the horizontal gene transfer (HGT) of antibiotic resistance genes (ARGs) between bacteria. This project combines state-of-the-art **ESM-2 protein language models** with **XGBoost machine learning** to predict whether an ARG is mobile (transferable) or non-mobile (chromosomally stable).
+
+### Key Features
+
+### Key Features
+
+- 🤖 **ESM-2 (650M parameters)** - Meta's protein language model
+
+- 🌲 **XGBoost Classifier** - 99% accuracy- 🤖 **ESM-2 (650M parameters)** - Meta's protein language model for sequence embeddings
+
+- 🎨 **Interactive UI** - Real-time predictions- 🌲 **XGBoost Classifier** - Gradient boosting with 99% accuracy
+
+- 📊 **6,053 ARGs** from CARD Database- 🎨 **Interactive Streamlit UI** - Real-time predictions with beautiful visualizations
+
+- 🔍 **Similarity Search** - Find nearest genes- 📊 **CARD Database** - 6,053 curated antibiotic resistance genes
+
+- 📈 **Batch Processing** - Analyze multiple sequences- 🔍 **Similarity Search** - Find nearest matching genes in database
+
+- 📈 **Batch Processing** - Analyze multiple sequences at once
 
 ---
 
-## Problem Statement
+---
 
-Antibiotic resistance is escalating worldwide due to the spread of resistance genes between bacteria, not just the evolution of resistance within a single organism. However:
+## 🚀 Quick Start
 
-- There is no simple pipeline to analyze mobility potential of resistance genes
-- ARG datasets are fragmented across different databases
-- Predicting whether a gene is mobile or non-mobile requires integrating sequence data, ontology, and metadata
+## 🚀 Quick Start
 
-**Key Question:** Which antibiotic resistance genes demonstrate the highest mobility potential and thus pose the greatest risk for horizontal gene transfer?
+### Installation
+
+### Prerequisites
+
+```bash
+
+git clone https://github.com/riya7064/GeneMobility.git- Python 3.10+
+
+cd GeneMobility- CUDA-capable GPU (optional, for faster inference)
+
+pip install -r requirements.txt- 8GB+ RAM
+
+```
+
+### Installation
+
+### Run Application
+
+```bash
+
+```bash# Clone the repository
+
+$env:KMP_DUPLICATE_LIB_OK="TRUE"  # Windowsgit clone https://github.com/riya7064/GeneMobility.git
+
+streamlit run app.pycd GeneMobility
+
+```
+
+# Install dependencies
+
+Navigate to **http://localhost:8501**pip install -r requirements.txt
+
+```
 
 ---
 
-## Objective
+### Run the Web Application
 
-To create a data-driven system that identifies and predicts the mobility potential of antibiotic resistance genes using genomic features and machine learning.
+## 📊 Model Performance
 
-### Specific Objectives
+```bash
 
-1. Collect and preprocess genomic ARG data from CARD
-2. Extract biological and metadata features such as:
-   - Resistance class
-   - Host organism
-   - Protein sequence
-   - Mechanism of action
-3. Apply clustering to discover patterns of mobility
-4. Classify genes into:
-   - High-mobility (HGT-prone)
-   - Low-mobility (genomically stable)
-5. Visualize and interpret the biological significance of high-risk mobile genes
+```# Set environment variable
+
+Accuracy:   99.01%$env:KMP_DUPLICATE_LIB_OK="TRUE"  # Windows PowerShell
+
+Precision:  100%# OR
+
+Recall:     99%export KMP_DUPLICATE_LIB_OK=TRUE  # Linux/Mac
+
+F1-Score:   0.99
+
+```# Launch Streamlit app
+
+streamlit run app.py
+
+---```
+
+
+
+## 💡 UsageOpen your browser and navigate to **http://localhost:8501**
+
+
+
+1. **Single Prediction**: Enter amino acid sequence---
+
+2. **Batch Analysis**: Upload CSV with sequences
+
+3. **View Results**: Mobility prediction + similarity search## 📊 Model Architecture
+
+
+
+---### ESM-2 Protein Language Model
+
+- **Architecture**: Transformer-based (650M parameters)
+
+## 📁 Project Structure- **Training Data**: 250M protein sequences
+
+- **Embedding Size**: 1,280 dimensions
+
+```- **Layer Used**: Layer 33 (final representation)
+
+GeneMobility/
+
+├── app.py                    # Streamlit web app### XGBoost Classifier
+
+├── requirements.txt          # Dependencies- **Algorithm**: Gradient Boosting Decision Trees
+
+├── Notebooks/               # ML pipeline- **Hyperparameters**:
+
+├── Outputs/                 # Models & embeddings  - `n_estimators`: 200
+
+└── card-data/              # CARD database  - `max_depth`: 8
+
+```  - `learning_rate`: 0.05
+
+  - `subsample`: 0.7
 
 ---
 
-## Methodology
+### Performance Metrics
 
-| Step | Description |
-|------|-------------|
+## 🛠️ Technologies```
+
+Accuracy:   99.01%
+
+- Python 3.10+ | PyTorch 2.5.1 | ESM-2 | XGBoost 3.1.1Precision:  100% (Mobile ARGs)
+
+- Streamlit 1.51.0 | Plotly | Pandas | NumPyRecall:     99% (Mobile ARGs)
+
+F1-Score:   0.99
+
+---```
+
+
+
+## 🤝 Contributing---
+
+
+
+Pull requests welcome! Please submit issues for bugs/features.## 💡 Usage Examples
+
+
+
+---### Single Sequence Prediction
+
+
+
+## 📄 Citation```python
+
+# Example: 23S rRNA methyltransferase Erm(A)
+
+```bibtexsequence = "MKQKNPKNTQNFITSKKHVKEILKYTNINKQDKIIEIGSGKGHFTK..."
+
+@software{arg_mobility_2025,
+
+  title = {ARG Mobility Prediction System},# Prediction: Non-Mobile ARG (39.22% probability)
+
+  author = {Riya},```
+
+  year = {2025},
+
+  url = {https://github.com/riya7064/GeneMobility}### Batch Analysis
+
+}
+
+```Upload a CSV file with columns:
+
+- `sequence`: Protein amino acid sequence
+
+---- `gene_name` (optional): Gene identifier
+
+
+
+## 🙏 Acknowledgments---
+
+
+
+- **CARD Database** - McMaster University## 📁 Project Structure
+
+- **Meta AI** - ESM-2 model
+
+- **XGBoost Community**```
+
+- **Streamlit**GeneMobility/
+
+├── app.py                          # Streamlit web application
+
+---├── requirements.txt                # Python dependencies
+
+├── README.md                       # Project documentation
+
+<div align="center">├── Notebooks/
+
+│   └── ARG_Mobility_Prediction_Model.ipynb  # ML training pipeline
+
+**🧬 Fighting AMR Through AI-Powered Genomics 🧬**├── Outputs/
+
+│   ├── mobility_predictor_xgb.pkl  # Trained XGBoost model
+
+[GitHub](https://github.com/riya7064/GeneMobility) • [Issues](https://github.com/riya7064/GeneMobility/issues)│   └── card_embeddings.pkl         # Pre-computed ESM embeddings
+
+└── card-data/                      # CARD database files
+
+</div>```
+
+
+---
 | **1. Data Acquisition** | Download latest CARD release (protein sequences, ontology, gene metadata) |
 | **2. Data Preprocessing** | Clean dataset, merge JSON/TSV metadata, normalize categorical values, extract features |
 | **3. Feature Engineering** | Compute mobility-related properties (gene family, plasmid association, host organisms) |
-| **4. Machine Learning / Analytics** | - Unsupervised: K-Means / Hierarchical clustering<br>- Optional supervised: XGBoost classifier |
-| **5. Visualization** | Mobility heatmaps, gene embeddings (PCA / UMAP), cluster plots |
-| **6. Interpretation & Insights** | Identify high-risk ARGs and evaluate biological patterns |
+| **4. Protein Embeddings** | Generate 1280-dimensional embeddings using ESM-2 (650M parameter protein language model) |
+| **5. Mobility Labeling** | Heuristic scoring based on sequence length, resistance mechanism, and gene family |
+| **6. Machine Learning** | XGBoost classifier trained on ESM embeddings (99% accuracy, 100% precision) |
+| **7. Visualization** | Mobility heatmaps, gene embeddings (PCA / UMAP), cluster plots, interactive gauge charts |
+| **8. Deployment** | Streamlit web application with real-time prediction and batch analysis |
+
+---
+
+## Models & Technologies Used
+
+### 🧠 Machine Learning Models
+
+#### 1. **ESM-2 (Evolutionary Scale Modeling)**
+- **Architecture**: Protein language model with 650M parameters
+- **Training Data**: 250M protein sequences from UniRef
+- **Embedding Size**: 1280 dimensions
+- **Layer Used**: Layer 33 (final representation)
+- **Purpose**: Generate contextualized protein sequence embeddings capturing structural and functional information
+- **Provider**: Meta AI (Facebook)
+- **Installation**: `pip install fair-esm`
+
+#### 2. **XGBoost Classifier**
+- **Algorithm**: Gradient Boosted Decision Trees
+- **Hyperparameters**:
+  - Estimators: 200
+  - Max Depth: 8
+  - Learning Rate: 0.05
+  - Subsample: 0.7
+  - Random State: 42
+- **Training Dataset**: 
+  - Total: 6,053 ARGs
+  - Mobile: 4,950 (82%)
+  - Non-Mobile: 1,103 (18%)
+  - Split: 80% train, 20% test
+- **Performance Metrics**:
+  - Overall Accuracy: **99%**
+  - Precision (Mobile): **100%**
+  - Recall (Mobile): **99%**
+  - F1-Score: **0.99**
+- **Purpose**: Predict mobility potential from ESM embeddings
+- **Model File**: `mobility_predictor_xgb.pkl`
+
+### 🛠️ Technology Stack
+
+#### Core Libraries
+- **PyTorch 2.5.1+cu121**: Deep learning framework with CUDA support
+- **fair-esm 2.0.0**: ESM protein language model implementation
+- **XGBoost 3.1.1**: Gradient boosting library
+- **scikit-learn**: Machine learning utilities and metrics
+- **joblib**: Model serialization
+
+#### Data Processing
+- **pandas**: Data manipulation and analysis
+- **numpy**: Numerical computing
+- **BioPython**: Biological sequence processing
+
+#### Visualization
+- **Streamlit 1.51.0**: Web application framework
+- **plotly**: Interactive visualizations (gauge charts, histograms)
+- **matplotlib & seaborn**: Static plotting
+
+#### Database
+- **CARD (Comprehensive Antibiotic Resistance Database)**: 
+  - Version: Latest release
+  - ARGs Analyzed: 6,053 genes
+  - Embeddings File: `card_embeddings.pkl`
+
+### 🚀 Deployment
+
+#### Web Application Features
+1. **Single Sequence Prediction**
+   - Text area input for amino acid sequences
+   - FASTA format support
+   - Real-time GPU/CPU detection
+   - Mobility probability gauge
+   - Nearest similar ARG matching using cosine similarity
+
+2. **Batch Analysis**
+   - CSV file upload
+   - Progress bar for multiple sequences
+   - Results table with predictions
+   - Downloadable CSV export
+   - Histogram visualization
+
+3. **Model Documentation**
+   - Architecture details
+   - Performance metrics
+   - Prediction workflow
+   - CARD database information
+
+#### Hardware Requirements
+- **Minimum**: CPU-only (slower predictions)
+- **Recommended**: NVIDIA GPU with CUDA support (faster inference)
+- **RAM**: 8GB minimum, 16GB recommended
+- **Storage**: 5GB for model weights and embeddings
+
+#### Running the Application
+```bash
+# Activate environment
+conda activate gpu-env
+
+# Set environment variable (Windows)
+$env:KMP_DUPLICATE_LIB_OK="TRUE"
+
+# Run Streamlit app
+streamlit run app.py
+```
+
+#### Access URLs
+- Local: `http://localhost:8502`
+- Network: `http://10.91.247.182:8502`
 
 ---
 
 ## Architecture Diagram
 
 ```
-+---------------------+
-| CARD Database       |
-| (Sequences + Meta)  |
-+----------+----------+
++-------------------------+
+| CARD Database           |
+| (6,053 ARGs)            |
+| - Sequences             |
+| - Metadata              |
+| - Ontology              |
++----------+--------------+
            |
            v
-+---------------------+
-| Data Preprocessing  |
-| (JSON/TSV + FASTA)  |
-+----------+----------+
++-------------------------+
+| Data Preprocessing      |
+| - JSON/TSV parsing      |
+| - FASTA processing      |
+| - Feature extraction    |
++----------+--------------+
            |
            v
-+-----------------------------+
-| Feature Engineering         |
-| - Ontology features         |
-| - Sequence embeddings       |
-| - Gene mobility features    |
-+----------+------------------+
++-------------------------+
+| ESM-2 Model (650M)      |
+| - Protein embeddings    |
+| - 1280-D vectors        |
+| - Layer 33 output       |
++----------+--------------+
            |
            v
-+-----------------------------+
-| Machine Learning            |
-| - Clustering (K-Means)      |
-| - Classification (XGBoost)  |
-+----------+------------------+
++-------------------------+
+| Feature Engineering     |
+| - Mobility scoring      |
+| - Heuristic labeling    |
+| - Train/test split      |
++----------+--------------+
            |
            v
-+-----------------------------+
-| Results & Visualization     |
-| - High-risk mobile ARG list |
-| - Mobility heatmaps         |
-| - ARG clustering map        |
-+-----------------------------+
++-------------------------+
+| XGBoost Classifier      |
+| - 200 estimators        |
+| - 99% accuracy          |
+| - Binary classification |
++----------+--------------+
+           |
+           v
++-------------------------+
+| Streamlit Web App       |
+| - Single prediction     |
+| - Batch analysis        |
+| - Interactive UI        |
++----------+--------------+
+           |
+           v
++-------------------------+
+| Results & Outputs       |
+| - Mobility probability  |
+| - Nearest ARG match     |
+| - Gauge visualizations  |
+| - Downloadable reports  |
++-------------------------+
 ```
 
 ---
 
 ## Expected Outcomes
 
-- Ranked list of genes likely to undergo horizontal transfer
-- Mobility visualization of bacterial species vs ARGs
-- Clustering map grouping genes by mobility pattern
-- Insight into which mechanisms or antibiotic classes are most mobile
+### 📊 Model Performance
+- **Classification Accuracy**: 99%
+- **Precision (Mobile ARGs)**: 100%
+- **Recall (Mobile ARGs)**: 99%
+- **F1-Score**: 0.99
+- **Prediction Speed**: 
+  - Single sequence: ~15-20 seconds (GPU)
+  - Batch processing: ~0.5-1 minute per sequence
+
+### 🎯 Key Deliverables
+1. **Trained ML Model**
+   - `mobility_predictor_xgb.pkl` - XGBoost classifier
+   - `card_embeddings.pkl` - Pre-computed ESM embeddings database
+
+2. **Interactive Web Application**
+   - Real-time ARG mobility prediction
+   - Batch sequence analysis
+   - Similarity search against CARD database
+   - Downloadable prediction reports
+
+3. **Mobility Insights**
+   - Ranked list of high-risk mobile ARGs
+   - Probability scores for horizontal gene transfer
+   - Nearest similar genes with metadata
+   - Confidence scores for predictions
+
+4. **Visualizations**
+   - Mobility probability gauge charts
+   - Batch analysis histograms
+   - PCA/UMAP clustering maps (in notebooks)
+   - Heatmaps of gene families vs. mobility
+
+### 🔬 Scientific Impact
+- **Early Detection**: Identify emerging mobile ARGs before widespread dissemination
+- **Risk Assessment**: Quantify HGT potential for any ARG sequence
+- **Database Enhancement**: Automated annotation pipeline for new resistance genes
+- **Clinical Relevance**: Support antibiotic stewardship and treatment decisions
+- **Research Acceleration**: High-throughput screening of metagenomic datasets
+
+---
+
+## Installation & Setup
+
+### Prerequisites
+- Python 3.10 or higher
+- Conda or pip package manager
+- CUDA-compatible GPU (optional, for faster inference)
+
+### Step 1: Clone Repository
+```bash
+git clone https://github.com/riya7064/GeneMobility.git
+cd GeneMobility
+```
+
+### Step 2: Create Environment
+```bash
+# Using conda (recommended)
+conda create -n arg-mobility python=3.10
+conda activate arg-mobility
+
+# Or using venv
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### Step 3: Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+**Key Dependencies:**
+```txt
+torch>=2.0.0
+fair-esm==2.0.0
+xgboost>=3.0.0
+streamlit>=1.30.0
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+plotly>=5.17.0
+biopython>=1.81
+joblib>=1.3.0
+```
+
+### Step 4: Download Model Files
+Ensure these files are in the project directory:
+- `mobility_predictor_xgb.pkl` (XGBoost trained model)
+- `card_embeddings.pkl` (Pre-computed CARD embeddings)
+
+### Step 5: Run Application
+```bash
+# Set environment variable (Windows)
+$env:KMP_DUPLICATE_LIB_OK="TRUE"
+
+# Set environment variable (Linux/Mac)
+export KMP_DUPLICATE_LIB_OK=TRUE
+
+# Launch Streamlit app
+streamlit run app.py
+```
+
+Access the app at: `http://localhost:8501`
+
+---
+
+## Usage Guide
+
+### 🔍 Single Sequence Prediction
+
+1. Navigate to the **"Predict Mobility"** tab
+2. Choose input method:
+   - **Direct Entry**: Paste amino acid sequence
+   - **Example Sequence**: Use pre-loaded test sequence
+3. Click **"Predict Mobility"** button
+4. View results:
+   - Mobility classification (Mobile/Non-Mobile)
+   - Probability score (0-100%)
+   - Confidence level
+   - Nearest similar ARG in CARD database
+   - Interactive gauge visualization
+
+**Example Input:**
+```
+MKQKNPKNTQNFITSKKHVKEILKYTNINKQDKIIEIGSGKGHFTK
+ELISQIRKNFSKESYDLILVIGSGNGGQTILSLMKFNQKVIIISSPPYI
+```
+
+### 📊 Batch Analysis
+
+1. Navigate to the **"Batch Analysis"** tab
+2. Prepare CSV file with columns:
+   - `sequence`: Protein amino acid sequence (required)
+   - `gene_name`: Gene identifier (optional)
+3. Upload CSV file
+4. Click **"Run Batch Prediction"**
+5. View results table with predictions
+6. Download results as CSV
+
+**Example CSV Format:**
+```csv
+gene_name,sequence
+ARG001,MKTIIALSYIFCLVFA...
+ARG002,MKQKNPKNTQNFITSK...
+```
+
+### 📚 Model Information
+
+Navigate to **"About the Model"** tab to view:
+- ESM-2 architecture details
+- XGBoost hyperparameters
+- Performance metrics
+- Prediction workflow
+- CARD database information
+
+---
+
+## Project Structure
+
+```
+GeneMobility/
+├── app.py                          # Streamlit web application
+├── antibiotic-resistance-gene-mobility-eda.ipynb  # EDA notebook
+├── Antibiotic Resistance Gene Mobility.ipynb       # ML training notebook
+├── mobility_predictor_xgb.pkl     # Trained XGBoost model
+├── card_embeddings.pkl            # Pre-computed ESM embeddings
+├── requirements.txt               # Python dependencies
+├── .gitignore                     # Git ignore patterns
+├── README.md                      # Project documentation
+└── card-data/                     # CARD database files
+    ├── card.json
+    ├── aro_index.tsv
+    ├── aro_categories.tsv
+    ├── protein_fasta_protein_homolog_model.fasta
+    └── ...
+```
 
 ---
 
 ## Conclusion
 
-This project demonstrates how data science and genomics can be used to address one of the most critical global health challenges: antimicrobial resistance. By analyzing the genomic features and mobility characteristics of resistance genes, we can:
+This project demonstrates how state-of-the-art AI and genomics can address antimicrobial resistance (AMR), one of the most critical global health challenges. By combining:
 
-- Detect emerging high-risk genes before they become widespread
-- Support policymakers and researchers in AMR surveillance
-- Accelerate antibiotic stewardship and drug development programs
+- **Protein Language Models (ESM-2)**: Capturing complex structural and functional patterns in resistance genes
+- **Machine Learning (XGBoost)**: Achieving 99% accuracy in mobility prediction
+- **Interactive Deployment (Streamlit)**: Making predictions accessible to researchers worldwide
 
-The integration of biological data with machine learning provides an automated and scalable solution for monitoring the mobility of antibiotic resistance genes.
+We provide an automated, scalable solution for:
+
+✅ **Early Detection** - Identifying emerging mobile ARGs before widespread dissemination  
+✅ **Risk Quantification** - Assigning mobility probability scores to any ARG sequence  
+✅ **Clinical Support** - Informing antibiotic stewardship and treatment strategies  
+✅ **Research Acceleration** - Enabling high-throughput screening of metagenomic data  
+
+### Future Enhancements
+- 🌐 Integration with real-time genomic surveillance systems
+- 🧬 Multi-species transfer prediction models
+- 📱 Mobile application for field deployment
+- 🔄 Continuous learning from newly discovered ARGs
+- 🗺️ Geographic spread visualization and tracking
+
+### Citation
+If you use this work, please cite:
+```
+Antibiotic Resistance Gene Mobility Prediction System
+GitHub: https://github.com/riya7064/GeneMobility
+```
+
+### Contact & Contributions
+- **Repository**: https://github.com/riya7064/GeneMobility
+- **Issues**: Report bugs or request features via GitHub Issues
+- **Contributions**: Pull requests welcome!
+
+---
+
+## Acknowledgments
+
+- **CARD Database**: Comprehensive Antibiotic Resistance Database team at McMaster University
+- **ESM-2**: Meta AI for the protein language model
+- **XGBoost**: Distributed Machine Learning Community
+- **Streamlit**: For the excellent web framework
+
+---
+
+## License
+
+This project is available for academic and research purposes. Please review the license file for commercial use restrictions.
+
+---
+
+**🧬 Fighting Antimicrobial Resistance Through AI-Powered Genomics**
 
 ---
 
